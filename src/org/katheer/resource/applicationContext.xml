@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="onairlms" class="org.katheer.bean.OnairLms">
+        <property name="courses">
+            <list>
+                <value>Java</value>
+                <value>Spring</value>
+                <value>Hibernate</value>
+                <value>Struts</value>
+                <value>SQL</value>
+                <value>MongoDB</value>
+                <value>Python</value>
+            </list>
+        </property>
+        <property name="faculties">
+            <map>
+                <entry key="Java" value="Abdul Katheer"/>
+                <entry key="Spring" value="Abdul Katheer"/>
+                <entry key="Hibernate" value="Dhanalakshmi"/>
+                <entry key="Struts" value="Vinoth"/>
+                <entry key="SQL" value="Ruthraj"/>
+                <entry key="MongoDB" value="Hari"/>
+                <entry key="Python" value="Panu"/>
+            </map>
+        </property>
+        <property name="cost">
+            <props>
+                <prop key="Java">17000</prop>
+                <prop key="Spring">21000</prop>
+                <prop key="Hibernate">15000</prop>
+                <prop key="Struts">16000</prop>
+                <prop key="SQL">12000</prop>
+                <prop key="MongoDB">13000</prop>
+                <prop key="Python">19000</prop>
+            </props>
+        </property>
+        <property name="students">
+            <set>
+                <ref bean="s1"/>
+                <ref bean="s2"/>
+                <ref bean="s3"/>
+                <ref bean="s4"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="s1" class="org.katheer.bean.Student">
+        <property name="name" value="Abdul"/>
+        <property name="email" value="abdul@ig.com"/>
+        <property name="mobile" value="9489284039"/>
+        <property name="coursesTaken">
+            <array>
+                <value>Java</value>
+                <value>Spring</value>
+                <value>Hibernate</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="s2" class="org.katheer.bean.Student">
+        <property name="name" value="Suresh"/>
+        <property name="email" value="suresh@gmail.com"/>
+        <property name="mobile" value="9792937821"/>
+        <property name="coursesTaken">
+            <array>
+                <value>Python</value>
+                <value>SQL</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="s3" class="org.katheer.bean.Student">
+        <property name="name" value="Vinoth"/>
+        <property name="email" value="vinoth@gmail.com"/>
+        <property name="mobile" value="9279208388"/>
+        <property name="coursesTaken">
+            <array>
+                <value>MongoDB</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="s4" class="org.katheer.bean.Student">
+        <property name="name" value="Hari"/>
+        <property name="email" value="hair@ymail.com"/>
+        <property name="mobile" value="9873919372"/>
+        <property name="coursesTaken">
+            <array>
+                <value>Struts</value>
+                <value>Hibernate</value>
+            </array>
+        </property>
+    </bean>
+</beans>
